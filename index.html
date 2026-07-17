@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="POW — the cutest bonk on Robinhood Chain." />
+  <title>POW — Bonk the Block</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pow: {
+              lime: "#C9FF38",
+              green: "#25C76F",
+              dark: "#102E22",
+              cream: "#FFFBE7",
+              peach: "#FFB076",
+            },
+          },
+          fontFamily: {
+            display: ["Chewy", "cursive"],
+            body: ["Nunito", "sans-serif"],
+          },
+          boxShadow: {
+            sticker: "6px 7px 0 #102E22",
+            "sticker-sm": "3px 4px 0 #102E22",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #fffbe7;
+      background-image: radial-gradient(#25c76f22 1.5px, transparent 1.5px);
+      background-size: 24px 24px;
+    }
+    .wiggle { animation: wiggle 2.8s ease-in-out infinite; transform-origin: center bottom; }
+    .float { animation: float 4s ease-in-out infinite; }
+    .marquee-track { animation: marquee 20s linear infinite; }
+    .burst {
+      clip-path: polygon(50% 0%, 60% 19%, 78% 5%, 80% 28%, 100% 25%, 88% 46%, 100% 60%, 78% 66%, 81% 89%, 59% 79%, 48% 100%, 39% 78%, 15% 92%, 21% 68%, 0 59%, 17% 45%, 4% 27%, 27% 28%, 29% 7%);
+    }
+    .comic-lines {
+      background: repeating-conic-gradient(from 0deg, #c9ff38 0deg 2deg, transparent 2deg 12deg);
+    }
+    @keyframes wiggle { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body class="font-body text-pow-dark selection:bg-pow-lime">
+  <header class="sticky top-0 z-50 border-b-2 border-pow-dark bg-pow-cream/90 backdrop-blur-md">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
+      <a href="#top" class="flex items-center gap-2" aria-label="POW home">
+        <span class="relative grid h-11 w-11 place-items-center overflow-hidden rounded-full border-2 border-pow-dark bg-pow-lime">
+          <span class="font-display text-xl">P!</span>
+          <img src="logo.png" alt="POW logo" class="absolute inset-0 h-full w-full object-cover" onerror="this.style.display='none'" />
+        </span>
+        <span class="font-display text-3xl tracking-wide">POW</span>
+      </a>
+      <div class="hidden items-center gap-7 font-extrabold md:flex">
+        <a href="#story" class="transition hover:-rotate-2 hover:text-pow-green">The Bonk</a>
+        <a href="#how-to-buy" class="transition hover:rotate-2 hover:text-pow-green">How to Buy</a>
+        <a href="#chart" class="transition hover:-rotate-2 hover:text-pow-green">Chart</a>
+      </div>
+      <a href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=TBA" target="_blank" rel="noopener noreferrer"
+         class="rounded-full border-2 border-pow-dark bg-pow-lime px-5 py-2 font-black shadow-sticker-sm transition hover:-translate-y-1 hover:shadow-sticker">
+        BUY $POW
+      </a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="relative overflow-hidden px-4 pb-20 pt-14 sm:px-6 lg:pb-28 lg:pt-20">
+      <div class="comic-lines absolute -right-40 -top-40 h-[560px] w-[560px] rounded-full opacity-50"></div>
+      <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
+        <div class="relative z-10 text-center lg:text-left">
+          <div class="mb-5 inline-flex rotate-[-2deg] items-center gap-2 rounded-full border-2 border-pow-dark bg-white px-4 py-2 font-black shadow-sticker-sm">
+            <span class="h-3 w-3 animate-pulse rounded-full bg-pow-green"></span>
+            LIVE ON ROBINHOOD CHAIN
+          </div>
+          <h1 class="font-display text-7xl leading-[.85] sm:text-8xl lg:text-[9rem]">
+            ONE CAT.<br />
+            ONE <span class="relative inline-block text-pow-green">BONK!<span class="absolute -right-8 -top-5 rotate-12 text-4xl text-pow-peach">★</span></span>
+          </h1>
+          <p class="mx-auto mt-7 max-w-xl text-xl font-bold leading-relaxed lg:mx-0 lg:text-2xl">
+            Robinhood’s cat meme brings <span class="rounded bg-pow-lime px-2">POW energy</span> as one cat bonks another. No thoughts. Just bonks.
+          </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
+            <a href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=TBA" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 rounded-2xl border-3 border-2 border-pow-dark bg-pow-green px-7 py-4 text-lg font-black text-white shadow-sticker transition hover:-translate-y-1">
+              <span class="text-2xl">⚡</span> BUY NOW
+            </a>
+            <a href="https://dexscreener.com/robinhood/TBA" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 rounded-2xl border-2 border-pow-dark bg-white px-7 py-4 text-lg font-black shadow-sticker transition hover:-translate-y-1">
+              CHART <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="mt-7 flex items-center justify-center gap-3 lg:justify-start">
+            <a href="https://t.me/pow_rh" target="_blank" rel="noopener noreferrer" aria-label="Join POW on Telegram"
+               class="group relative grid h-12 w-12 place-items-center overflow-hidden rounded-full border-2 border-pow-dark bg-[#229ED9] text-sm font-black text-white shadow-sticker-sm transition hover:-translate-y-1">
+              TG
+              <img src="tg.png" alt="" class="absolute inset-0 h-full w-full object-cover" onerror="this.style.display='none'" />
+            </a>
+            <a href="https://x.com/pow_rh" target="_blank" rel="noopener noreferrer" aria-label="Follow POW on X"
+               class="group relative grid h-12 w-12 place-items-center overflow-hidden rounded-full border-2 border-pow-dark bg-[#111] text-lg font-black text-white shadow-sticker-sm transition hover:-translate-y-1">
+              X
+              <img src="x.png" alt="" class="absolute inset-0 h-full w-full object-contain p-2" onerror="this.style.display='none'" />
+            </a>
+            <span class="ml-2 font-extrabold">@pow_rh</span>
+          </div>
+        </div>
+
+        <div class="relative mx-auto w-full max-w-xl">
+          <div class="float absolute -left-6 -top-10 z-20 grid h-32 w-32 rotate-[-12deg] place-items-center bg-pow-lime text-center font-display text-4xl burst sm:h-40 sm:w-40 sm:text-5xl">
+            POW!
+          </div>
+          <div class="wiggle relative aspect-square overflow-hidden rounded-[3rem] border-4 border-pow-dark bg-pow-green p-3 shadow-[12px_14px_0_#102E22]">
+            <div class="relative h-full overflow-hidden rounded-[2.3rem] bg-[#dfffb2]">
+              <div class="absolute inset-0 grid place-items-center p-8 text-center">
+                <div>
+                  <div class="text-8xl sm:text-9xl">🐱💥🐱</div>
+                  <p class="mt-5 font-display text-3xl">BONK THE BLOCK!</p>
+                </div>
+              </div>
+              <img src="banner.png" alt="POW cat bonking another cat" class="absolute inset-0 h-full w-full object-cover" onerror="this.style.display='none'" />
+            </div>
+          </div>
+          <span class="absolute -bottom-10 right-4 rotate-6 rounded-xl border-2 border-pow-dark bg-pow-peach px-5 py-2 font-display text-2xl shadow-sticker-sm">ticker: $POW</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="overflow-hidden border-y-2 border-pow-dark bg-pow-lime py-4">
+      <div class="marquee-track flex w-max whitespace-nowrap font-display text-2xl">
+        <span>POW! &nbsp; BONK RESPONSIBLY &nbsp; ★ &nbsp; POWERED BY ROBINHOOD ETH &nbsp; ★ &nbsp; CATS ON CHAIN &nbsp; ★ &nbsp;&nbsp;</span>
+        <span aria-hidden="true">POW! &nbsp; BONK RESPONSIBLY &nbsp; ★ &nbsp; POWERED BY ROBINHOOD ETH &nbsp; ★ &nbsp; CATS ON CHAIN &nbsp; ★ &nbsp;&nbsp;</span>
+      </div>
+    </div>
+
+    <section id="story" class="px-4 py-24 sm:px-6">
+      <div class="mx-auto max-w-6xl">
+        <div class="grid items-center gap-12 lg:grid-cols-2">
+          <div class="relative order-2 lg:order-1">
+            <div class="rotate-[-2deg] rounded-[2.5rem] border-3 border-pow-dark bg-white p-6 shadow-sticker">
+              <p class="text-sm font-black uppercase tracking-[.2em] text-pow-green">Breaking mews</p>
+              <p class="mt-3 font-display text-4xl leading-tight sm:text-5xl">Local cat discovers the fastest way to send a message onchain.</p>
+              <div class="mt-8 flex items-center gap-4 border-t-2 border-dashed border-pow-dark/30 pt-5">
+                <span class="grid h-12 w-12 place-items-center rounded-full bg-pow-lime text-2xl">🐾</span>
+                <div><p class="font-black">The Daily Bonk</p><p class="text-sm font-bold opacity-60">Definitely real journalism</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2">
+            <p class="font-display text-2xl text-pow-green">THE LORE</p>
+            <h2 class="mt-2 font-display text-5xl sm:text-7xl">Born from a bonk.<br />Built for the block.</h2>
+            <p class="mt-6 text-lg font-bold leading-relaxed opacity-80">
+              $POW captures that split-second of pure cat chaos: the wind-up, the bonk, the absolutely unbothered face afterward. A community-powered meme for everyone who knows the internet belongs to cats.
+            </p>
+            <div class="mt-7 flex flex-wrap gap-3 font-black">
+              <span class="rounded-full border-2 border-pow-dark bg-pow-lime px-4 py-2">✓ 100% CAT</span>
+              <span class="rounded-full border-2 border-pow-dark bg-pow-peach px-4 py-2">✓ MAXIMUM BONK</span>
+              <span class="rounded-full border-2 border-pow-dark bg-white px-4 py-2">✓ COMMUNITY POWERED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-to-buy" class="border-y-2 border-pow-dark bg-pow-dark px-4 py-24 text-pow-cream sm:px-6">
+      <div class="mx-auto max-w-7xl">
+        <div class="text-center">
+          <p class="font-display text-2xl text-pow-lime">FOUR LITTLE BONKS</p>
+          <h2 class="mt-2 font-display text-6xl sm:text-7xl">How to Buy $POW</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-lg font-bold opacity-70">Grab Robinhood ETH and join the clowder in four easy steps.</p>
+        </div>
+        <div class="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="group relative rounded-3xl border-2 border-pow-cream bg-[#183f30] p-6 transition hover:-translate-y-2 hover:bg-[#1d4d3a]">
+            <span class="absolute -right-3 -top-5 grid h-14 w-14 rotate-6 place-items-center rounded-full border-2 border-pow-dark bg-pow-lime font-display text-3xl text-pow-dark">1</span>
+            <span class="text-5xl">👛</span><h3 class="mt-5 font-display text-3xl text-pow-lime">Get a Wallet</h3>
+            <p class="mt-3 font-bold leading-relaxed opacity-75">Set up a Web3 wallet and keep your secret recovery phrase somewhere safe.</p>
+          </article>
+          <article class="group relative rounded-3xl border-2 border-pow-cream bg-[#183f30] p-6 transition hover:-translate-y-2 hover:bg-[#1d4d3a]">
+            <span class="absolute -right-3 -top-5 grid h-14 w-14 -rotate-6 place-items-center rounded-full border-2 border-pow-dark bg-pow-lime font-display text-3xl text-pow-dark">2</span>
+            <span class="text-5xl">💚</span><h3 class="mt-5 font-display text-3xl text-pow-lime">Add Robinhood</h3>
+            <p class="mt-3 font-bold leading-relaxed opacity-75">Connect to Robinhood Chain, then fund your wallet with ETH for the swap and gas.</p>
+          </article>
+          <article class="group relative rounded-3xl border-2 border-pow-cream bg-[#183f30] p-6 transition hover:-translate-y-2 hover:bg-[#1d4d3a]">
+            <span class="absolute -right-3 -top-5 grid h-14 w-14 rotate-6 place-items-center rounded-full border-2 border-pow-dark bg-pow-lime font-display text-3xl text-pow-dark">3</span>
+            <span class="text-5xl">🦄</span><h3 class="mt-5 font-display text-3xl text-pow-lime">Open Uniswap</h3>
+            <p class="mt-3 font-bold leading-relaxed opacity-75">Tap Buy Now, connect your wallet, and paste the official $POW contract address.</p>
+          </article>
+          <article class="group relative rounded-3xl border-2 border-pow-cream bg-[#183f30] p-6 transition hover:-translate-y-2 hover:bg-[#1d4d3a]">
+            <span class="absolute -right-3 -top-5 grid h-14 w-14 -rotate-6 place-items-center rounded-full border-2 border-pow-dark bg-pow-lime font-display text-3xl text-pow-dark">4</span>
+            <span class="text-5xl">💥</span><h3 class="mt-5 font-display text-3xl text-pow-lime">Swap & POW!</h3>
+            <p class="mt-3 font-bold leading-relaxed opacity-75">Choose your ETH amount, review the details, confirm the swap, and welcome to $POW.</p>
+          </article>
+        </div>
+        <div class="mt-12 flex justify-center">
+          <a href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=TBA" target="_blank" rel="noopener noreferrer"
+             class="rounded-2xl border-2 border-pow-cream bg-pow-lime px-8 py-4 text-xl font-black text-pow-dark shadow-[6px_7px_0_#25C76F] transition hover:-translate-y-1">
+            START THE SWAP ⚡
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 py-24 sm:px-6">
+      <div class="mx-auto max-w-5xl text-center">
+        <p class="font-display text-2xl text-pow-green">THE ONE TRUE BONK</p>
+        <h2 class="mt-2 font-display text-5xl sm:text-7xl">Official Contract</h2>
+        <p class="mt-4 text-lg font-bold opacity-70">Always verify the contract before swapping.</p>
+        <div class="mx-auto mt-8 flex max-w-3xl items-center gap-3 rounded-2xl border-2 border-pow-dark bg-white p-3 pl-5 shadow-sticker">
+          <code id="contract-address" class="min-w-0 flex-1 truncate text-left text-base font-black sm:text-lg">TBA</code>
+          <button id="copy-contract" type="button" class="shrink-0 rounded-xl border-2 border-pow-dark bg-pow-lime px-5 py-3 font-black transition hover:bg-pow-green hover:text-white">
+            COPY CA
+          </button>
+        </div>
+        <p id="copy-status" class="mt-4 h-6 font-black text-pow-green" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="chart" class="border-y-2 border-pow-dark bg-pow-green px-4 py-24 sm:px-6">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-9 flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-end">
+          <div><p class="font-display text-2xl">THE BONK-O-METER</p><h2 class="font-display text-6xl sm:text-7xl">Live Chart</h2></div>
+          <a href="https://dexscreener.com/robinhood/TBA" target="_blank" rel="noopener noreferrer"
+             class="rounded-xl border-2 border-pow-dark bg-pow-cream px-5 py-3 font-black shadow-sticker-sm transition hover:-translate-y-1">OPEN DEXSCREENER ↗</a>
+        </div>
+        <div class="overflow-hidden rounded-3xl border-4 border-pow-dark bg-[#111] shadow-[10px_12px_0_#102E22]">
+          <iframe
+            title="POW live DexScreener chart"
+            src="https://dexscreener.com/robinhood/TBA?embed=1&theme=dark&trades=0&info=0"
+            class="h-[600px] w-full"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 py-24 text-center sm:px-6">
+      <div class="mx-auto max-w-4xl rounded-[3rem] border-3 border-pow-dark bg-pow-lime px-6 py-16 shadow-sticker">
+        <div class="text-7xl">🐱⚡</div>
+        <h2 class="mt-5 font-display text-6xl sm:text-8xl">Ready to bonk?</h2>
+        <p class="mx-auto mt-4 max-w-xl text-xl font-extrabold">Join the cutest corner of Robinhood Chain. The next bonk is yours.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=TBA" target="_blank" rel="noopener noreferrer" class="rounded-2xl border-2 border-pow-dark bg-pow-dark px-8 py-4 text-lg font-black text-white transition hover:-translate-y-1">BUY $POW</a>
+          <a href="https://t.me/pow_rh" target="_blank" rel="noopener noreferrer" class="rounded-2xl border-2 border-pow-dark bg-white px-8 py-4 text-lg font-black transition hover:-translate-y-1">JOIN TELEGRAM</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t-2 border-pow-dark bg-pow-dark px-4 py-10 text-pow-cream sm:px-6">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
+      <div><p class="font-display text-4xl text-pow-lime">POW!</p><p class="mt-1 text-sm font-bold opacity-60">© 2026 POW. Bonks reserved.</p></div>
+      <p class="max-w-xl text-xs font-bold leading-relaxed opacity-50">$POW is a meme token with no intrinsic value or expectation of financial return. Cryptocurrency is risky. Always do your own research.</p>
+      <div class="flex gap-3">
+        <a href="https://t.me/pow_rh" target="_blank" rel="noopener noreferrer" class="grid h-10 w-10 place-items-center rounded-full border border-pow-cream/40 font-black transition hover:border-pow-lime hover:text-pow-lime" aria-label="Telegram">TG</a>
+        <a href="https://x.com/pow_rh" target="_blank" rel="noopener noreferrer" class="grid h-10 w-10 place-items-center rounded-full border border-pow-cream/40 bg-[#111] font-black transition hover:border-pow-lime hover:text-pow-lime" aria-label="X">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const copyButton = document.getElementById("copy-contract");
+    const copyStatus = document.getElementById("copy-status");
+    const contractAddress = document.getElementById("contract-address").textContent.trim();
+
+    copyButton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(contractAddress);
+        copyButton.textContent = "COPIED!";
+        copyStatus.textContent = "Contract copied to your clipboard ⚡";
+      } catch {
+        const textArea = document.createElement("textarea");
+        textArea.value = contractAddress;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        textArea.remove();
+        copyButton.textContent = "COPIED!";
+        copyStatus.textContent = "Contract copied to your clipboard ⚡";
+      }
+      setTimeout(() => {
+        copyButton.textContent = "COPY CA";
+        copyStatus.textContent = "";
+      }, 2200);
+    });
+  </script>
+</body>
+</html>
